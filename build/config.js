@@ -47,11 +47,11 @@ module.exports = smart({
         }, 'sass-loader']
       }]
     },
-    devtool: "cheap-eval-source-map",
+    devtool: "source-map",
     plugins: [
       new (require('html-webpack-plugin'))({
         filename: 'index.html',
-        template: join('web/index.html')
+        template: join('web/index.ejs')
       })
     ],
     mode: 'development'

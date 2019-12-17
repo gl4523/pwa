@@ -1,0 +1,45 @@
+@import './global.scss';
+// 顶部空白高度
+$topBlockHeight: 90px;
+.pageContainer {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding-top: $topBlockHeight;
+  .leftNavContainer {
+    width: 380px;
+    height: calc(100vh - #{$topBlockHeight});
+    padding: 0 12px;
+    font-weight: 500;
+    .navHeader {
+      & > *:nth-child(n+1) {
+        margin-top: 10px;
+      }
+    }
+    .navTitle {
+      font-weight: inherit;
+      position: relative;
+      width: fit-content;
+      cursor: pointer;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-bottom: 1px dashed transparent;
+        transition: all 0.2s linear;
+      }
+      &:hover::after {
+        bottom: -1px;
+        border-bottom-color: palevioletred;
+      }
+    }
+  }
+  .rightContainer {
+    flex: 1;
+    height: calc(100vh - #{$topBlockHeight});
+  }
+}
