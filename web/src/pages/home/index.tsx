@@ -1,9 +1,9 @@
 import React from 'react'
-
+import img from 'assets/images/paper.jpg'
 function Home() {
   return (
     <div>
-      <h2>首页</h2>
+      <img style={{width: '100px', height: 'auto'}} src={img}></img>
     </div>
   )
 }

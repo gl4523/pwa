@@ -26,7 +26,7 @@ $topBlockHeight: 90px;
       position: relative;
       width: fit-content;
       cursor: pointer;
-      font-size: 26px;
+      font-size: 28px;
       &::after {
         content: '';
         display: block;
@@ -52,7 +52,7 @@ $topBlockHeight: 90px;
 }
 
 .navList {
-  font-size: 22px;
+  font-size: 24px;
   color: $nColor;
 
   .navLink {
@@ -78,5 +78,30 @@ $topBlockHeight: 90px;
     & span {
       color: $stressColor;
     }
+  }
+}
+
+.iconGroup {
+  margin-top: 22px;
+  
+}
+
+.shareIcon {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  font-size: 22px !important;
+  border-radius: 50%;
+  border: 1px solid $nColor;
+  color: $nColor;
+  transition: color 0.16s linear;
+  cursor: pointer;
+  &:hover {
+    color: black;
+  }
+  & + & {
+    margin-left: 16px;
   }
 }

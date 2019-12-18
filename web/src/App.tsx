@@ -40,8 +40,14 @@ export default () => (
     <div className={styles.pageContainer}>
       <div className={styles.leftNavContainer}>
         <div className={styles.navHeader}>
-          <h2 className={styles.navTitle}>导航栏<small><Icon type='icongithubalt'/></small></h2>
+          <h2 className={styles.navTitle}>
+            <span>导航栏</span>
+          </h2>
           <NavList />
+          <div className={styles.iconGroup}>
+            <Icon type='icongithubalt' title={'github'} className={styles.shareIcon} />
+            <Icon type='iconmailo' title={'email'} className={styles.shareIcon} />
+          </div>
         </div>
       </div>
       <div className={styles.rightContainer}>
@@ -53,6 +59,7 @@ export default () => (
           }
         </Switch>
       </div>
+
     </div>
   </HashRouter>
 )
