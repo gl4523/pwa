@@ -1,27 +1,32 @@
 @import './global.scss';
 // 顶部空白高度
 $topBlockHeight: 90px;
+
 .pageContainer {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   padding-top: $topBlockHeight;
+
   .leftNavContainer {
     width: 380px;
     height: calc(100vh - #{$topBlockHeight});
     padding: 0 12px;
     font-weight: 500;
+
     .navHeader {
-      & > *:nth-child(n+1) {
-        margin-top: 10px;
+      &>*:nth-child(n+1) {
+        margin-top: 16px;
       }
     }
+
     .navTitle {
       font-weight: inherit;
       position: relative;
       width: fit-content;
       cursor: pointer;
+      font-size: 26px;
       &::after {
         content: '';
         display: block;
@@ -32,14 +37,46 @@ $topBlockHeight: 90px;
         border-bottom: 1px dashed transparent;
         transition: all 0.2s linear;
       }
+
       &:hover::after {
         bottom: -1px;
         border-bottom-color: palevioletred;
       }
     }
   }
+
   .rightContainer {
     flex: 1;
     height: calc(100vh - #{$topBlockHeight});
+  }
+}
+
+.navList {
+  font-size: 22px;
+  color: $nColor;
+
+  .navLink {
+    list-style-type: none;
+    position: relative;
+    line-height: 2;
+
+    &>a {
+      text-decoration: none;
+      color: $nColor;
+    }
+
+    &::before {
+      content: '>';
+      display: inline-block;
+      margin-right: 12px;
+    }
+  }
+
+  .navLink.currentLink {
+    color: $stressColor;
+    font-weight: bold;
+    & span {
+      color: $stressColor;
+    }
   }
 }

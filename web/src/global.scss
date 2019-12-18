@@ -1,7 +1,8 @@
 // 着重颜色
-@stressColor: #ef5285;
+$stressColor: #ef5285;
 // 文本、描述颜色
-@nColor: #999;
+$nColor: #999;
+
 * {
   margin: 0;
   padding: 0;
