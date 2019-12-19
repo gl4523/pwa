@@ -1,14 +1,44 @@
 import React from 'react'
-
+import styles from './index.scss'
+import cs from 'classnames'
 export interface CardComponentProp {
   id: string
   title: string
   resume: string
   type: 'image' | 'text' | 'hybrid'
+  img?: string
 }
 function Card(props: CardComponentProp) {
+  const { type, resume, title, img } = props
   return (
-    <div></div>
+    <div className={styles.cardContainer}>
+      {
+        type === 'image' && (
+          <>
+            <img src={img} className={styles.coverImg}></img>
+            <div className={cs(styles.articleContainer, styles.inner, styles.diyScroll)}>
+              <h2>{title}</h2>
+              <article>
+                {resume}
+              </article>
+            </div>
+          </>
+        )
+      }
+
+      {
+        type === 'text' && (
+          <>
+            <div className={cs(styles.articleContainer, styles.diyScroll)}>
+              <h2>{title}</h2>
+              <article>
+                {resume}
+              </article>
+            </div>
+          </>
+        )
+      }
+    </div>
   )
 }
 
