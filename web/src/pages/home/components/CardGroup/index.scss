@@ -1,0 +1,8 @@
+.cardGroup {
+  width: 100%;
+  position: relative;
+  opacity: 0;
+}
+.cardGroup.show {
+  opacity: 1;
+}

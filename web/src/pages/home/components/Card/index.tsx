@@ -12,32 +12,48 @@ function Card(props: CardComponentProp) {
   const { type, resume, title, img } = props
   return (
     <div className={styles.cardContainer}>
-      {
-        type === 'image' && (
-          <>
-            <img src={img} className={styles.coverImg}></img>
-            <div className={cs(styles.articleContainer, styles.inner, styles.diyScroll)}>
-              <h2>{title}</h2>
-              <article>
-                {resume}
-              </article>
-            </div>
-          </>
-        )
-      }
+      <div className={styles.cardBox}>
+        {
+          type === 'image' && (
+            <>
+              <img src={img} className={styles.coverImg}></img>
+              <div className={cs(styles.articleContainer, styles.inner, styles.diyScroll)}>
+                <h2>{title}</h2>
+                <article>
+                  {resume}
+                </article>
+              </div>
+            </>
+          )
+        }
 
-      {
-        type === 'text' && (
-          <>
-            <div className={cs(styles.articleContainer, styles.diyScroll)}>
-              <h2>{title}</h2>
-              <article>
-                {resume}
-              </article>
-            </div>
-          </>
-        )
-      }
+        {
+          type === 'text' && (
+            <>
+              <div className={cs(styles.articleContainer, styles.diyScroll)}>
+                <h2>{title}</h2>
+                <article>
+                  {resume}
+                </article>
+              </div>
+            </>
+          )
+        }
+
+        {
+          type === 'hybrid' && (
+            <>
+              <img src={img} className={styles.coverImg}></img>
+              <div className={cs(styles.articleContainer, styles.diyScroll)}>
+                <h2>{title}</h2>
+                <article>
+                  {resume}
+                </article>
+              </div>
+            </>
+          )
+        }
+      </div>
     </div>
   )
 }
