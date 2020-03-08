@@ -66,7 +66,7 @@ module.exports = smart({
     }]
   },
   output: {
-    publicPath: '/'
+    publicPath: '/js'
   },
   externals: {
 

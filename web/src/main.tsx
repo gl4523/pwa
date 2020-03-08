@@ -12,7 +12,7 @@ if (module) {
 }
 
 if (typeof navigator.serviceWorker !== 'undefined') {
-    navigator.serviceWorker.register('./js/sw.js').then(registration => {
+    navigator.serviceWorker.register('/js/sw.js').then(registration => {
       console.log(registration )
       return registration 
     }).catch(e => {
