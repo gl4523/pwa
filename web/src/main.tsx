@@ -6,7 +6,7 @@ import humanPic from '../assets/images/human.png'
 
 ReactDOM.render(<div>
   <h2>hello pwa</h2>
-  <img src='humanPic'></img>
+  <img src={humanPic}></img>
 </div>, document.querySelector('#root'))
 
 if (typeof navigator.serviceWorker !== 'undefined') {
