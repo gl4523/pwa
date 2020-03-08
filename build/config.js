@@ -78,6 +78,7 @@ module.exports = smart({
     new (require('html-webpack-plugin'))({
       filename: 'index.html',
       template: join('web/index.ejs'),
+      chunks: ['main'],
       minify: {
         removeComments: true,
         collapseWhitespace: true,
