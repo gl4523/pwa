@@ -4,11 +4,12 @@ const join = path => require('path').join(__dirname, '..', path)
 
 module.exports = smart({
   entry: {
-    main: join('web/src/main.tsx')
+    main: join('web/src/main.tsx'),
+    sw: join('web/src/worker/sw.ts')
   },
   output: {
-    path: join('dist'),
-    filename: 'js/[name].[hash:6].js',
+    path: join('doc'),
+    filename: 'js/[name].js',
     publicPath: '/'
   },
   module: {
@@ -109,7 +110,8 @@ module.exports = smart({
     plugins: [
       new (require('html-webpack-plugin'))({
         filename: 'index.html',
-        template: join('web/index.ejs')
+        template: join('web/index.ejs'),
+        chunks: ['main']
       })
     ],
     mode: 'development'

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node build/run.js",
-    "build": "rimraf dist && cross-env NODE_ENV=production webpack --config build/config.js"
+    "build": "rimraf doc && cross-env NODE_ENV=production webpack --config build/config.js"
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
