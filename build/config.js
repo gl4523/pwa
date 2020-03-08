@@ -74,6 +74,7 @@ module.exports = smart({
   optimization: {
 
   },
+  devtool: 'source-map',
   plugins: [
     new (require('html-webpack-plugin'))({
       filename: 'index.html',
