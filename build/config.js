@@ -66,7 +66,7 @@ module.exports = smart({
     }]
   },
   output: {
-    publicPath: '/js'
+    publicPath: 'https://gl4523.github.io/pwa/'
   },
   externals: {
 
