@@ -8,7 +8,7 @@ module.exports = smart({
     sw: join('web/src/worker/sw.ts')
   },
   output: {
-    path: join('doc'),
+    path: join('docs'),
     filename: 'js/[name].js',
     publicPath: '/'
   },

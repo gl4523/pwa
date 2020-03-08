@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node build/run.js",
-    "build": "rimraf doc && cross-env NODE_ENV=production webpack --config build/config.js"
+    "build": "rimraf docs && cross-env NODE_ENV=production webpack --config build/config.js"
   },
   "repository": {
     "type": "git",
