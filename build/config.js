@@ -21,7 +21,7 @@ module.exports = smart({
       loader: {
         loader: 'url-loader',
         options: {
-          limit: 2048,
+          limit: 1024,
           name: 'public/image/[path][name].[ext]'
         }
       }
